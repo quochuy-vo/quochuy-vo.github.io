@@ -1,0 +1,586 @@
+/* ===================================================================
+ * Clean Minimal Academic Stylesheet for Quoc-Huy Vo
+ * Simple, elegant, typography-focused academic design.
+ * Minimal visualization, maximum readability.
+ * =================================================================== */
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --bg-page: #ffffff;
+  --bg-subtle: #f9fafb;
+  --bg-code: #f3f4f6;
+
+  --text-main: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-link: #1d4ed8;
+  --text-link-hover: #1e40af;
+
+  --border-color: #e5e7eb;
+  --border-subtle: #f3f4f6;
+
+  --container-width: 820px;
+}
+
+[data-theme="dark"] {
+  --bg-page: #111827;
+  --bg-subtle: #1f2937;
+  --bg-code: #0b0f19;
+
+  --text-main: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --text-link: #60a5fa;
+  --text-link-hover: #93c5fd;
+
+  --border-color: #374151;
+  --border-subtle: #1f2937;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a {
+  color: var(--text-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Top Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg-page);
+  border-bottom: 1px solid var(--border-color);
+  opacity: 0.98;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  text-decoration: none;
+  color: var(--text-link);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--text-link);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.3rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* Main Profile Header */
+.profile-header {
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+}
+
+.profile-meta h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+.profile-native-name {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.profile-position {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.profile-affiliation {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.profile-advisor {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.profile-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.profile-links-row span {
+  color: var(--border-color);
+}
+
+/* Content Sections */
+.section {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Bio Text */
+.bio-text {
+  font-size: 0.98rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.bio-text:last-child {
+  margin-bottom: 0;
+}
+
+/* News List */
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.news-table tr {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.news-table tr:last-child {
+  border-bottom: none;
+}
+
+.news-table td {
+  padding: 0.55rem 0;
+  vertical-align: top;
+}
+
+.news-date-cell {
+  width: 90px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.news-content-cell {
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Publications List */
+.pub-list {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-item {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.pub-title {
+  font-weight: 600;
+  color: var(--text-main);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.pub-authors {
+  color: var(--text-secondary);
+}
+
+.pub-authors strong {
+  color: var(--text-main);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pub-venue {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.pub-actions {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+}
+
+.pub-actions a,
+.pub-actions button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.82rem;
+  font-family: inherit;
+  color: var(--text-link);
+  cursor: pointer;
+}
+
+.pub-actions button:hover,
+.pub-actions a:hover {
+  text-decoration: underline;
+}
+
+/* BibTeX Box */
+.bibtex-box {
+  display: none;
+  margin-top: 0.6rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-code);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  position: relative;
+}
+
+.bibtex-box.show {
+  display: block;
+}
+
+.bibtex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.bibtex-copy-btn {
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.bibtex-copy-btn:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+.bibtex-code {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+}
+
+/* Simple Experience & Education List */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.entry-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.entry-date {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.entry-subtitle {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.entry-bullets {
+  list-style: disc;
+  margin-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.entry-bullets li {
+  margin-bottom: 0.25rem;
+}
+
+/* Skills List */
+.skills-simple-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.skills-simple-list p strong {
+  color: var(--text-main);
+}
+
+.skills-simple-list p {
+  color: var(--text-secondary);
+}
+
+/* Contact List */
+.contact-simple-list {
+  list-style: none;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.contact-simple-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-simple-list strong {
+  color: var(--text-main);
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--text-link);
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--text-main);
+  color: var(--bg-page);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .profile-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .profile-links-row {
+    justify-content: center;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-page);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+  }
+
+  .news-date-cell {
+    width: 75px;
+  }
+}
+
+/* Print */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 10.5pt;
+  }
+
+  .navbar, .theme-toggle-btn, .mobile-nav-toggle, .pub-actions, .toast, .footer {
+    display: none !important;
+  }
+
+  .section {
+    padding: 1rem 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .profile-header {
+    padding: 0 0 1rem 0 !important;
+  }
+}

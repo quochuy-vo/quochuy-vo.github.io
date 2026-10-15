@@ -1,447 +1,465 @@
 <!DOCTYPE html>
-<!--[if lt IE 8 ]>
-<html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>
-<html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html lang="en" data-theme="light">
 <head>
-
     <meta charset="utf-8">
-    <title>VÕ QUỐC HUY</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <script src="js/modernizr.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quoc-Huy Vo | Ph.D. Candidate @ NII-SOKENDAI</title>
+    
+    <meta name="author" content="Quoc-Huy Vo (Võ Quốc Huy)">
+    <meta name="description" content="Quoc-Huy Vo is a Ph.D. Candidate in Informatics at SOKENDAI / National Institute of Informatics (NII), Tokyo, Japan. Research in Cloud Security, Infrastructure as Code (IaC), and Web Privacy.">
+    <meta name="keywords" content="Quoc-Huy Vo, Vo Quoc Huy, SOKENDAI, National Institute of Informatics, NII, Kensuke Fukuda, Cloud Computing, Infrastructure as Code, IaC Security, Terraform, Code Smells, Web Privacy, SSO Login, PII Leakage, LLM">
+    
+    <meta property="og:title" content="Quoc-Huy Vo | Ph.D. Candidate @ NII-SOKENDAI">
+    <meta property="og:description" content="Ph.D. Candidate in Informatics at SOKENDAI / National Institute of Informatics (NII), Tokyo, Japan. Advised by Prof. Kensuke Fukuda.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://quochuy-vo.github.io/">
+    <meta property="og:image" content="./images/about_me.jpg">
+    
     <link rel="shortcut icon" href="favicon.ico">
-
+    <link rel="stylesheet" href="css/academic.css">
 </head>
-
 <body>
 
-<header id="home">
+    <div id="global-toast" class="toast" role="status" aria-live="polite"></div>
 
-    <nav id="nav-wrap">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="nav-brand">Quoc-Huy Vo</a>
 
-        <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-        <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
 
-        <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#testimonials">Quotes</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-        </ul>
+            <div class="nav-controls">
+                <button type="button" class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle theme" title="Toggle theme">
+                    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
 
-    </nav>
+                <button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
-    <div class="row banner">
-        <div class="banner-text">
-            <h1 class="responsive-headline">Quoc - Huy Vo</h1>
-            <h3>I'm a Vietnam based <span>software engineer</span>, <span>back-end engineer</span> and <span>devops engineer</span>
-                . Let's <a class="smoothscroll"
-                           href="#about">start
-                    scrolling</a>
-                and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
-            <hr/>
-            <ul class="social">
-                <li><a href="https://www.facebook.com/vq.huy98/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/huy-vw/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <!-- Header / Profile Area -->
+    <header class="profile-header" id="home">
+        <div class="container">
+            <div class="profile-flex">
+                <img src="./images/about_me.jpg" alt="Quoc-Huy Vo" class="profile-avatar">
+                <div class="profile-meta">
+                    <h1>Quoc-Huy Vo <span class="profile-native-name">(Võ Quốc Huy)</span></h1>
+                    <div class="profile-position">Ph.D. Candidate in Informatics</div>
+                    <div class="profile-affiliation">
+                        <a href="https://www.nii.ac.jp/en/" target="_blank" rel="noopener">National Institute of Informatics (NII)</a> &amp; 
+                        <a href="https://www.sokendai.ac.jp/en/" target="_blank" rel="noopener">SOKENDAI</a>, Tokyo, Japan
+                    </div>
+                    <div class="profile-advisor">
+                        Advisor: <a href="https://scholar.google.com/citations?user=AUZIYQHPMb1BtbtEeZ7Ktbv_TX2qaViHjclOinqO9O5t4ajpAOH4a7njPrbglkC50-Du7Klo2zACbgUBrhMcWrfmm4mPpvH1yBgHK8EC1tX7itJwiasufRlQFyjNqDj43zQ7SDEDz87Vzt2MQUxKQUc3O_YBkL4=" target="_blank" rel="noopener">Prof. Kensuke Fukuda</a>
+                    </div>
+                    <div class="profile-links-row">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                        <span>&middot;</span>
+                        <a href="https://www.linkedin.com/in/huy-vw/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span>&middot;</span>
+                        <a href="mailto:huyvq1428@gmail.com">huyvq1428@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <p class="bio-text">
+                I am a Ph.D. Candidate in the Department of Informatics at <strong>SOKENDAI</strong> (The Graduate University for Advanced Studies), carrying out research at the <strong>National Institute of Informatics (NII)</strong> in Tokyo, Japan, supervised by <a href="https://scholar.google.com/citations?user=AUZIYQHPMb1BtbtEeZ7Ktbv_TX2qaViHjclOinqO9O5t4ajpAOH4a7njPrbglkC50-Du7Klo2zACbgUBrhMcWrfmm4mPpvH1yBgHK8EC1tX7itJwiasufRlQFyjNqDj43zQ7SDEDz87Vzt2MQUxKQUc3O_YBkL4=" target="_blank" rel="noopener">Prof. Kensuke Fukuda</a>.
+            </p>
+            <p class="bio-text">
+                My research interests lie in <strong>Cloud Computing</strong>, <strong>Information Security</strong>, <strong>Infrastructure as Code (IaC)</strong>, and <strong>Web Privacy</strong>. Specifically, I develop automated static analysis frameworks and leverage fine-tuned Large Language Models (LLMs) to detect security vulnerabilities, anti-patterns, and code smells in Terraform configurations. In parallel, I conduct empirical web privacy measurements analyzing Personally Identifiable Information (PII) leakage across Single Sign-On (SSO) ecosystems.
+            </p>
+            <p class="bio-text">
+                Prior to my doctoral studies, I worked for over three years as a DevOps and Back-End Engineer at FPT Software and Meete.co. I received my Bachelor of Engineering in Computer Network and Data Communication from the <strong>University of Information Technology</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section" id="news">
+        <div class="container">
+            <h2 class="section-title">News</h2>
+            <table class="news-table">
+                <tbody>
+                    <tr>
+                        <td class="news-date-cell">2026</td>
+                        <td class="news-content-cell">
+                            Paper <em>&ldquo;Securing IaC: Detecting Terraform Security Smells with Fine-tuned LLMs&rdquo;</em> published in the <strong>Journal of Information Processing (JIP)</strong>, Vol. 34.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="news-date-cell">2025</td>
+                        <td class="news-content-cell">
+                            Presented <em>&ldquo;Harnessing the Power of LLMs for Code Smell Detection in Terraform Infrastructure as Code&rdquo;</em> at <strong>IEEE COMPSAC 2025</strong>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="news-date-cell">2025</td>
+                        <td class="news-content-cell">
+                            Paper <em>&ldquo;I never willingly consented to this! investigate PII leakage via SSO logins&rdquo;</em> published in <strong>IEEE Transactions on Privacy</strong>, Vol. 2.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="news-date-cell">2024</td>
+                        <td class="news-content-cell">
+                            Presented <em>&ldquo;Towards Characterizing Code Smells in IaC Codes Using Terraform&rdquo;</em> at <strong>IEICE Proceedings Series</strong>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="news-date-cell">2023</td>
+                        <td class="news-content-cell">
+                            Presented <em>SSOLogin</em> at <strong>AINTEC 2023</strong>; Paper on university student PII leakage published in <strong>IEICE Transactions on Information and Systems</strong>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="news-date-cell">Nov 2023</td>
+                        <td class="news-content-cell">
+                            Started doctoral program as Ph.D. Candidate &amp; Research Assistant at <strong>NII / SOKENDAI</strong>, Tokyo, Japan.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section" id="publications">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <ol class="pub-list">
+                
+                <!-- 1 -->
+                <li class="pub-item">
+                    <span class="pub-title">Securing IaC: Detecting Terraform Security Smells with Fine-tuned LLMs</span>
+                    <span class="pub-authors"><strong>Quoc-Huy Vo</strong>, Ha Dao, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">Journal of Information Processing (JIP), Vol. 34, pp. 886&ndash;897, 2026.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-vo2026securing">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-vo2026securing">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-vo2026securing">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-vo2026securing">@article{vo2026securing,
+  title={Securing IaC: Detecting Terraform Security Smells with Fine-tuned LLMs},
+  author={Vo, Quoc-Huy and Dao, Ha and Fukuda, Kensuke},
+  journal={Journal of Information Processing},
+  volume={34},
+  pages={886--897},
+  year={2026},
+  publisher={Information Processing Society of Japan}
+}</pre>
+                    </div>
+                </li>
+
+                <!-- 2 -->
+                <li class="pub-item">
+                    <span class="pub-title">Harnessing the Power of LLMs for Code Smell Detection in Terraform Infrastructure as Code</span>
+                    <span class="pub-authors"><strong>Quoc-Huy Vo</strong>, Ha Dao, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">IEEE 49th Annual Computers, Software, and Applications Conference (COMPSAC 2025), IEEE, 2025.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-vo2025harnessing">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-vo2025harnessing">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-vo2025harnessing">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-vo2025harnessing">@inproceedings{vo2025harnessing,
+  title={Harnessing the Power of LLMs for Code Smell Detection in Terraform Infrastructure as Code},
+  author={Vo, Quoc-Huy and Dao, Ha and Fukuda, Kensuke},
+  booktitle={2025 IEEE 49th Annual Computers, Software, and Applications Conference (COMPSAC)},
+  year={2025},
+  organization={IEEE}
+}</pre>
+                    </div>
+                </li>
+
+                <!-- 3 -->
+                <li class="pub-item">
+                    <span class="pub-title">I never willingly consented to this! investigate PII leakage via SSO logins</span>
+                    <span class="pub-authors">Tien-Huy Pham, <strong>Quoc-Huy Vo</strong>, Ha Dao, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">IEEE Transactions on Privacy, Vol. 2, pp. 67&ndash;78, 2025.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-pham2025never">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-pham2025never">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-pham2025never">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-pham2025never">@article{pham2025never,
+  title={I never willingly consented to this! investigate PII leakage via SSO logins},
+  author={Pham, Tien-Huy and Vo, Quoc-Huy and Dao, Ha and Fukuda, Kensuke},
+  journal={IEEE Transactions on Privacy},
+  volume={2},
+  pages={67--78},
+  year={2025},
+  publisher={IEEE}
+}</pre>
+                    </div>
+                </li>
+
+                <!-- 4 -->
+                <li class="pub-item">
+                    <span class="pub-title">Towards Characterizing Code Smells in IaC Codes Using Terraform</span>
+                    <span class="pub-authors"><strong>Quoc-Huy Vo</strong>, Ha Dao, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">IEICE Proceedings Series, Vol. 80, No. P-18, 2024.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-vo2024towards">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-vo2024towards">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-vo2024towards">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-vo2024towards">@inproceedings{vo2024towards,
+  title={Towards Characterizing Code Smells in IaC Codes Using Terraform},
+  author={Vo, Quoc-Huy and Dao, Ha and Fukuda, Kensuke},
+  booktitle={IEICE Proceedings Series},
+  volume={80},
+  number={P-18},
+  year={2024}
+}</pre>
+                    </div>
+                </li>
+
+                <!-- 5 -->
+                <li class="pub-item">
+                    <span class="pub-title">SSOLogin: A Framework for Automated Web Privacy Measurement with SSO Logins</span>
+                    <span class="pub-authors">Tien-Huy Pham, <strong>Quoc-Huy Vo</strong>, Ha Dao, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">Proceedings of the 18th Asian Internet Engineering Conference (AINTEC 2023), pp. 69&ndash;77, 2023.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-pham2023ssologin">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-pham2023ssologin">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-pham2023ssologin">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-pham2023ssologin">@inproceedings{pham2023ssologin,
+  title={SSOLogin: A framework for automated web privacy measurement with SSO logins},
+  author={Pham, Tien-Huy and Vo, Quoc-Huy and Dao, Ha and Fukuda, Kensuke},
+  booktitle={Proceedings of the 18th Asian Internet Engineering Conference (AINTEC)},
+  pages={69--77},
+  year={2023}
+}</pre>
+                    </div>
+                </li>
+
+                <!-- 6 -->
+                <li class="pub-item">
+                    <span class="pub-title">I Never Trust My University for This! Investigating Student PII Leakage at Vietnamese Universities</span>
+                    <span class="pub-authors">Ha Dao, <strong>Quoc-Huy Vo</strong>, Tien-Huy Pham, Kensuke Fukuda</span><br>
+                    <span class="pub-venue">IEICE Transactions on Information and Systems, Vol. E106-D, No. 12, pp. 2048&ndash;2056, 2023.</span>
+                    <div class="pub-actions">
+                        <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">[Google Scholar]</a>
+                        <button type="button" class="bibtex-toggle-btn" data-target="bib-dao2023never">[BibTeX]</button>
+                    </div>
+                    <div class="bibtex-box" id="bib-dao2023never">
+                        <div class="bibtex-header">
+                            <span>BibTeX</span>
+                            <button type="button" class="bibtex-copy-btn" data-code="code-dao2023never">Copy</button>
+                        </div>
+                        <pre class="bibtex-code" id="code-dao2023never">@article{dao2023never,
+  title={I Never Trust My University for This! Investigating Student PII Leakage at Vietnamese Universities},
+  author={Dao, Ha and Vo, Quoc-Huy and Pham, Tien-Huy and Fukuda, Kensuke},
+  journal={IEICE Transactions on Information and Systems},
+  volume={106},
+  number={12},
+  pages={2048--2056},
+  year={2023},
+  publisher={IEICE}
+}</pre>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="entry-list">
+                
+                <div>
+                    <div class="entry-header">
+                        <span class="entry-title">Research Assistant &amp; Ph.D. Student</span>
+                        <span class="entry-date">Nov 2023 &ndash; Present</span>
+                    </div>
+                    <div class="entry-subtitle">
+                        <a href="https://www.nii.ac.jp/en/" target="_blank" rel="noopener">National Institute of Informatics (NII)</a> &amp; SOKENDAI, Tokyo, Japan
+                    </div>
+                    <ul class="entry-bullets">
+                        <li>Conducting research in Cloud Security, Infrastructure as Code (Terraform), and Web Privacy under Prof. Kensuke Fukuda.</li>
+                        <li>Developing static and dynamic analysis tools to detect security anti-patterns and code smells in Terraform.</li>
+                        <li>Fine-tuning Large Language Models for automated vulnerability detection and IaC smell classification.</li>
+                        <li>Measuring Personally Identifiable Information (PII) leakage through Single Sign-On (SSO) authentication systems.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="entry-header">
+                        <span class="entry-title">DevOps Engineer</span>
+                        <span class="entry-date">Nov 2021 &ndash; Nov 2023</span>
+                    </div>
+                    <div class="entry-subtitle">
+                        <a href="https://fptsoftware.com/" target="_blank" rel="noopener">FPT Software Company Limited</a>
+                    </div>
+                    <ul class="entry-bullets">
+                        <li>Automated multi-environment continuous integration and deployment (CI/CD) pipelines using Jenkins, GitLab CI, and Docker.</li>
+                        <li>Managed enterprise cloud infrastructure and system reliability for client applications.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="entry-header">
+                        <span class="entry-title">DevOps &amp; Back-End Engineer</span>
+                        <span class="entry-date">Jul 2020 &ndash; Nov 2021</span>
+                    </div>
+                    <div class="entry-subtitle">
+                        <a href="https://tuoitrethudo.com.vn/startup-tim-kiem-18-trieu-usd-dau-tu-tu-cuoc-thi-khoi-nghiep-18176.html" target="_blank" rel="noopener">Meete.co (Nguyen Group JSC)</a>
+                    </div>
+                    <ul class="entry-bullets">
+                        <li>Developed backend microservices in Go (Domain-Driven Design), Java, and Python with RabbitMQ message queues.</li>
+                        <li>Engineered cloud infrastructure across AWS and GCP; orchestrated Docker containers using HashiCorp Nomad and Consul.</li>
+                        <li>Designed database schemas and query optimizations for PostgreSQL, MariaDB, and MongoDB.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="entry-list">
+                
+                <div>
+                    <div class="entry-header">
+                        <span class="entry-title">Ph.D. in Informatics</span>
+                        <span class="entry-date">Nov 2023 &ndash; Present</span>
+                    </div>
+                    <div class="entry-subtitle">
+                        <a href="https://www.sokendai.ac.jp/en/" target="_blank" rel="noopener">SOKENDAI (The Graduate University for Advanced Studies)</a> &amp; 
+                        <a href="https://www.nii.ac.jp/en/" target="_blank" rel="noopener">National Institute of Informatics (NII)</a>, Tokyo, Japan
+                    </div>
+                    <ul class="entry-bullets">
+                        <li>Department of Informatics, School of Multidisciplinary Sciences.</li>
+                        <li>Advisor: <strong>Prof. Kensuke Fukuda</strong>.</li>
+                        <li>Focus: Cloud Security, Infrastructure as Code, Web Privacy, Large Language Models.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="entry-header">
+                        <span class="entry-title">Bachelor of Engineering in Computer Network and Data Communication</span>
+                        <span class="entry-date">2016 &ndash; 2021</span>
+                    </div>
+                    <div class="entry-subtitle">
+                        <a href="https://en.uit.edu.vn/" target="_blank" rel="noopener">University of Information Technology</a>
+                    </div>
+                    <ul class="entry-bullets">
+                        <li>Graduation Thesis: <em>Build a System to Detect Tracking Through Machine Learning</em> (Score: 8.8 / 10).</li>
+                        <li>Scientific Research Program grants (100% funded) in 2019 and 2020.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills &amp; Interests</h2>
+            <div class="skills-simple-list">
+                <p><strong>Research &amp; Security:</strong> Cloud Security, Infrastructure as Code (Terraform) Security, Code Smell Detection, Fine-tuned LLMs, Web Privacy, Single Sign-On (SSO) Measurement, Static Analysis, Network Security.</p>
+                <p><strong>Languages &amp; Core Systems:</strong> Python, Go (Golang), Java, Bash/Shell Scripting, Linux/Unix, Domain-Driven Design (DDD), Git.</p>
+                <p><strong>Cloud &amp; DevOps:</strong> Terraform, Docker Containerization, CI/CD (Jenkins, GitLab CI), AWS, GCP, HashiCorp Nomad &amp; Consul.</p>
+                <p><strong>Databases &amp; Middleware:</strong> PostgreSQL, MariaDB, MongoDB, Redis, RabbitMQ Message Queues.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <ul class="contact-simple-list">
+                <li>
+                    <strong>Affiliation:</strong> National Institute of Informatics (NII), 2-1-2 Hitotsubashi, Chiyoda-ku, Tokyo 101-8430, Japan (Laboratory of Prof. Kensuke Fukuda)
+                </li>
+                <li>
+                    <strong>Email:</strong> <a href="mailto:huyvq1428@gmail.com">huyvq1428@gmail.com</a>
+                </li>
+                <li>
+                    <strong>Profiles:</strong> 
+                    <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> &middot; 
+                    <a href="https://www.linkedin.com/in/huy-vw/" target="_blank" rel="noopener">LinkedIn</a>
                 </li>
             </ul>
         </div>
-    </div>
+    </section>
 
-    <p class="scrolldown">
-        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-    </p>
-
-</header>
-
-
-<section id="about">
-
-    <div class="row">
-
-        <div class="three columns">
-            <img class="profile-pic" src="./images/about_me.jpeg" alt=""/>
-        </div>
-
-        <div class="nine columns main-col">
-            <h2>About Me</h2>
-
-            <p>Experienced Back End and DevOps Engineer with a demonstrated history of working in the product company.
-                Skilled in Java, JPA, Hibernate, Golang, Python
-                - Object-Oriented, OOP design patterns, the SOLID
-                principles, DDD
-                - PostgreSQL, MariaDB
-                - MongoDB, Redis
-                - Git
-                - CI/CD, Jenkins, Drone.io
-                - Docker
-                - Microservice
-                - Hashicorp
-                Nomad orchestration, Hashicorp Consul service discovery, Hashicorp stack
-                - Linux, computer networking, network security.
-                Strong engineering professional with Computer Network and
-                Communication
-                focused in Data Communication and Computer Networking from the University of Information Technology (VNU
-                - HCMC).
-            </p>
-
-            <div class="row">
-                <div class="columns contact-details">
-                    <h2>Contact Details</h2>
-                    <p class="address">
-                        <span>Quoc - Huy Vo (Võ Quốc Huy)</span><br>
-                        <span>Viet Nam<br>
-						         Ho Chi Minh city
-                     </span><br>
-                        <span>Email: huyvq1428@gmail.com</span>
-                    </p>
-                </div>
-
-                <div class="columns download">
-                    <p>
-                        <a href="./resources/vo_quoc_huy.pdf" class="button" target="_blank"><i
-                                class="fa fa-download"></i>Download
-                            Resume</a>
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="resume">
-    <div class="row work" id="work">
-        <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-        </div>
-        <div class="nine columns main-col">
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>Research Assistant - PhD student</h3>
-                    <p class="info">
-                        <a href="https://www.nii.ac.jp/en/" target="_blank">
-                            National Institute of Informatics (NII-SOKENDAI)</a> <span>&bull;</span> <em class="date">Nov
-                        2023 - Present</em>
-                    </p>
-                    <p>
-                        Updating
-                    </p>
-                </div>
-            </div>
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>DevOps Engineer</h3>
-                    <p class="info">
-                        <a href="https://fptsoftware.com/" target="_blank">
-                            FPT Software Company Limited Ho CHi Minh City</a> <span>&bull;</span> <em class="date">Nov
-                        2021 - Nov 2023</em>
-                    </p>
-                    <p>
-                        Updating
-                    </p>
-                </div>
-            </div>
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>DevOps Engineer</h3>
-                    <p class="info">
-                        <a href="https://tuoitrethudo.com.vn/startup-tim-kiem-18-trieu-usd-dau-tu-tu-cuoc-thi-khoi-nghiep-18176.html" target="_blank">
-                            Meete.co (Nguyen Group Join Stock Company)</a> <span>&bull;</span> <em class="date">Sep
-                        2020 - Nov 2021</em>
-                    </p>
-                    <p>
-                        Build CICD system (deploy python application, build & deploy java, golang, nodejs application)
-                        - Write and manage CI, orchestration job files
-                        - Build cloud server network system (both GCP and AWS)
-                        - Reconstructed microservice system (Docker, Hashicorp stack)
-                        - Managed cloud server system (GCP and AWS, CI, BI tool, gateway)
-                    </p>
-                </div>
-            </div>
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>Back-end Engineer</h3>
-                    <p class="info">
-                        <a href="https://tuoitrethudo.com.vn/startup-tim-kiem-18-trieu-usd-dau-tu-tu-cuoc-thi-khoi-nghiep-18176.html" target="_blank">
-                            Meete.co (Nguyen Group Join Stock Company) </a> <span>&bull;</span> <em class="date">Jul
-                        2020 - Nov 2021</em></p>
-                    <p>
-                        Designed requirement documents from business problems
-                        - Designed ERD (Entity Relationship Diagram)
-                        - Designed Database (SQL - PostGresql & MariaDB, noSQL - MongoDB)
-                        - Designed & Developed APIs (Java, Python, Golang)
-                        - Designed & Developed worker sync data using message queue (RabbitMQ)
-                        - Migrated Database to server system
-                        - Designed & Developed a new back-end framework (golang using DDD parttern)
-                        - Cross review code team member
-                        - Write and manage Facebook Workplace & Telegram bot
-                        - Researched Block-chain solution for Loyalty
-                    </p>
-                </div>
-
+    <!-- Minimal Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Quoc-Huy Vo. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Back to top &uarr;</a>
+                <a href="https://scholar.google.com/citations?user=sk1fXKkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/huy-vw/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="row education">
-        <div class="three columns header-col">
-            <h1><span>Education</span></h1>
-        </div>
-        <div class="nine columns main-col">
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>University of Information Technology (Vietnam National University - Ho Chi Minh city)</h3>
-                    <p class="info">Bachelor of Engineering - Computer Network and Data Communication
-                        <span>&bull;</span> <em class="date">2016-2021</em></p>
-                    <p>
-                        <em>Thesis:</em>
-                        <br>
-                        Build a system to detect Tracking through Machine Learning
-                        <br>
-                        <i>Scored <b><i>8.8</i></b></i>
-                        <br>
-                        <br>
-                        <em>Scientific research program:</em>
-                        <br>
-                        Build a system to detect Malicious Web Resources through Machine Learning <br>
-                        Build a system to detect Tracking through Machine Learning
-                        <br>
-                        <br>
-                        <em>Courses projects:</em>
-                        <br>
-                        Developed sudoku application and build load balancing server system for sudoku application
-                        - Build IDS/IPS network system
-                        - Designed and developed wifi marketing system (both embedded firmware and Pfsense server)
-                        - Configured Cisco network devices
-                        - Build rain cover IoT system using sensor, voice, and cloud server remote control
-                        <br>
-                        <br>
-                        <em>NetClub (Networking Student Club)</em>
-                        Organized network troubleshoot contest (2018)
-                        - Organized network seminars with companies
-                        - Organized technical sharing
-                        <br>
-                        <br>
-                        <em>WebClub (Student club)</em>
-                        <br>
-                        Learn html, css and programming language (javascript)
-                        - Learn how to build web projects
-                        - Demo seminar with lecturer
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="row education">
-        <div class="three columns header-col">
-            <h1><span>Certifications</span></h1>
-        </div>
-        <div class="nine columns main-col">
-            <div class="row item">
-                <div class="twelve columns">
-                    <h3>Cisco Certified Network Associate Routing and Switching (CCNA)</h3>
-                    <p class="info">International Network Administrator Training Center VnPro - HCMC
-                        <span>&bull;</span> <em class="date">2018</em></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="row skill">
-        <div class="three columns header-col">
-            <h1><span>Honors & awards</span></h1>
-        </div>
-        <div class="nine columns main-col">
-            <div class="bars">
-                <h3>Scientific research program</h3>
-                <p class="info">University of Information Technology <span>&bull;</span> <em class="date">Sep 2020</em>
-                </p>
-                <p>
-                    Build a system to detect Tracking through Machine Learning - 100 percent funded
-                </p>
-                <h3>Scientific research program</h3>
-                <p class="info">University of Information Technology <span>&bull;</span> <em class="date">Aug 2019</em>
-                </p>
-                <p>
-                    Build a system to detect Malicious Web Resources through Machine Learning - 100 percent funded
-                </p>
-                <h3>Scholarship encouraging study</h3>
-                <p class="info">University of Information Technology <span>&bull;</span> <em class="date">2019</em>
-                </p>
-                <p>
-                    Award for top 10 highest-ranked students - 120 percent of tuition
-                </p>
-                <h3>Scholarship encouraging study</h3>
-                <p class="info">University of Information Technology <span>&bull;</span> <em class="date">2018</em>
-                </p>
-                <p>
-                    Award for top 10 highest-ranked students - 120 percent of tuition
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row skill">
-        <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
-        </div>
-        <div class="nine columns main-col">
-            <div class="bars">
-                <p>Java, JPA, Hibernate
-                    - Python
-                    - Golang
-                    - Object-Oriented Programming (OOP), SOLID Design Principles, DDD
-                    - PostgreSQL, MariaDB
-                    - MogoDB, Redis
-                    - RabbitMQ
-                    - Git (Github, Bitbucket)
-                    - Docker
-                    - Continuous Integration and Continuous Delivery (CI/CD)
-                    - Jenkins
-                    - Drone.io
-                    - Hashicorp Nomad Orchestration
-                    - Hashicorp Consul Service discovery
-                    - Hashicorp stack
-                    - Linux
-                    - Microservices
-                    - Amazon Web Services (AWS)
-                    - Computer networking
-                    - Network security
-                    - Agile scrum
-                </p>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<section id="testimonials">
-    <div class="text-container">
-        <div class="row">
-            <div class="two columns header-col">
-                <h1><span></span></h1>
-            </div>
-            <div class="ten columns flex-container">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <blockquote>
-                                <p>
-                                    Talk is cheap. Show me the code.
-                                </p>
-                                <cite>Linus Torvalds</cite>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>
-                                    Don't comment bad code - rewrite it.
-                                </p>
-                                <cite>Brian Kernighan</cite>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>
-                                    People don't care about what you say, they care about what you build.
-                                </p>
-                                <cite>Mark Zuckerberg</cite>
-                            </blockquote>
-                        </li> <!-- slide ends -->
-
-                        <li>
-                            <blockquote>
-                                <p>
-                                    We have to stop optimizing for programmers and start optimizing for users.
-                                </p>
-                                <cite>Jeff Atwood</cite>
-                            </blockquote>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>
-                                    Bad programmers worry about the code. Good programmers worry about data structures
-                                    and their relationships.
-                                </p>
-                                <cite>Linus Torvalds</cite>
-                            </blockquote>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="row">
-        <div class="two columns header-col">
-            <h1><span></span></h1>
-        </div>
-        <div class="seven columns">
-            <h2><span class="lead">Contact information</span></h2>
-            <p>
-                <b>
-                    Linkedin: <a href="https://linkedin.com/in/huy-vw" target="_blank">linkedin.com/in/huy-vw</a>
-                    <br>
-                    Github: <a href="https://github.com/huyvo1428" target="_blank">github.com/huyvo1428</a>
-                </b>
-            </p>
-
-        </div>
-        <div class="three columns action">
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="row">
-        <div class="twelve columns">
-            <p><b>Get in Touch</b></p>
-            <ul class="social-links">
-                <li><a href="https://www.facebook.com/vq.huy98/"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/huy-vw/"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-        </div>
-        <p>Email: huyvq1428@gmail.com</p>
-        <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
-    </div>
-</footer>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/waypoints.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/magnific-popup.js"></script>
-<script src="js/init.js"></script>
-
+    <script src="js/academic.js"></script>
 </body>
-
 </html>
