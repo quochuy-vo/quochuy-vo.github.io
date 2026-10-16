@@ -230,13 +230,13 @@ a:hover {
 .profile-affiliation {
   font-size: 0.92rem;
   color: var(--text-secondary);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.15rem;
 }
 
 .profile-advisor {
   font-size: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .profile-links-row {
