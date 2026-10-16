@@ -155,7 +155,7 @@
 
   // --- Active Nav Highlighting via IntersectionObserver ---
   const sections = document.querySelectorAll('section[id], header[id]');
-  const navLinks = document.querySelectorAll('.nav-item a');
+  const navLinks = document.querySelectorAll('.nav-menu a');
 
   if ('IntersectionObserver' in window && sections.length > 0) {
     const observer = new IntersectionObserver((entries) => {
