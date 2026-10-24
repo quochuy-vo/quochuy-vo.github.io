@@ -225,6 +225,24 @@ a:hover {
   color: var(--text-main);
 }
 
+.top-headline-link-wrapper,
+.top-headline-email-wrapper {
+  white-space: nowrap;
+}
+
+.inline-email-link,
+.top-headline-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  vertical-align: baseline;
+}
+
+.inline-email-icon {
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
+
 /* Main Profile Header */
 .profile-header {
   padding: 3rem 0 2rem 0;
